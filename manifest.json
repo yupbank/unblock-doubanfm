@@ -1,0 +1,25 @@
+{
+  "name": "Unblock douban fm",
+  "version": "1.0",
+  "description": "This extension enables you to listen doubanfm outside mainland China",
+  "manifest_version": 2,
+  "icons":
+  {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128":"icon128.png"
+      },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+    "permissions": [
+        "webRequestBlocking", 
+        "webRequest", 
+        "http://douban.fm/*"
+        ],
+    "background":{
+        "scripts":
+        ["background.js"]
+        }
+}
