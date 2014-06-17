@@ -10,7 +10,7 @@ if(localStorage['in_mainland'] == undefined) {
 
 function autoDetect() {
 	if(localStorage['auto_detect'] != 0) {
-        var url = 'http://www.douban.fm/'
+        var url = 'http://douban.fm/'
         var myRequest = new XMLHttpRequest();
         myRequest.onreadystatechange = function(){
              //if(myRequest.readyState == 4 && myRequest.status == 400){
@@ -30,11 +30,11 @@ function autoDetect() {
 	    };
         myRequest.open("GET", url, false); 
         myRequest.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-        try{
+        //try{
             myRequest.send(null);
-        }catch(err){
-            localStorage['in_mainland'] = 0;
-        }
+        //}catch(err){
+        //    localStorage['in_mainland'] = 0;
+        //}
 		return;
 }
 }
