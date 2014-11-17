@@ -52,7 +52,7 @@ chrome.webRequest.onBeforeRequest.addListener(
         if(details.url.match('douban.fm/?$') != null || details.url.match('douban.fm/\\?start*') !=null) {
             return {
                 redirectUrl: details.url.replace(/^http:\/\/[^\/]+/,
-                        "http://douban.fm/partner/qq_plus")
+                        "http://douban.fm/partner/baidu")
             };
 		}	
     },
